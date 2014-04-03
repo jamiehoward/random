@@ -30,7 +30,7 @@ function create_encryption_key($length = 32)
 </head>
 <body>
     <div class="container">
-            <h1 class="title">Session encryption key generator</h1>
+            <h1 class="title">Random string generator</h1>
             <h4>Simply refresh for a new key</h4>
             <h5>32-bit random strings:</h5>
             <ul class="list-unstyled">
