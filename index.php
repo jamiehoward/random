@@ -22,38 +22,40 @@ function create_encryption_key($length = 32)
 
 <html doctype="html">
 <head>
-        <title>Session encryption key generator</title>
+        <title>Random string generator</title>
         <style type="text/css">
                 .container { margin:15px; }
         </style>
-        <link rel="stylesheet" href="./bootstrap.min.css" />
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-        <div class="container">
-                <h1 class="title">Session encryption key generator</h1>
-                <h4>Simply refresh for a new key</h4>
-                <h5>32-bit random strings:</h5>
-                <ul class="list-unstyled">
-                        <?php $i = 0;
-                        while ( $i <= 10) {
-                                echo "<li>" . create_encryption_key() . "</li>";
-                                $i++;
-                        }?>
-                </ul>
-                <h5>MD5 encrypted keys:</h5>
-                <ul class="list-unstyled">
-                        <?php $i = 0;
-                        while ( $i <= 10) {
-                                echo "<li>" . md5(create_encryption_key()) . "</li>";
-                                $i++;
-                        }?>
-                </ul>
-                <div class="footer">
-                        <hr />
-                        Thrown together by <a href="http://github.com/blackairplane">Jamie Howard</a>
-                         <a href="https://twitter.com/share" class="twitter-share-button" data-via="JamieHoward">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-                </div>
-        </div>
+    <div class="container">
+            <h1 class="title">Session encryption key generator</h1>
+            <h4>Simply refresh for a new key</h4>
+            <h5>32-bit random strings:</h5>
+            <ul class="list-unstyled">
+                    <?php $i = 0;
+                    while ( $i <= 10) {
+                            echo "<li>" . create_encryption_key() . "</li>";
+                            $i++;
+                    }?>
+            </ul>
+            <h5>MD5 encrypted keys:</h5>
+            <ul class="list-unstyled">
+                    <?php $i = 0;
+                    while ( $i <= 10) {
+                            echo "<li>" . md5(create_encryption_key()) . "</li>";
+                            $i++;
+                    }?>
+            </ul>
+            <div class="footer">
+                    <hr />
+                    Thrown together by <a href="http://github.com/blackairplane">Jamie Howard</a>
+                     <a href="https://twitter.com/share" class="twitter-share-button" data-via="JamieHoward">Tweet</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </div>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </body>
 </html>
